@@ -7,12 +7,11 @@ const ingredients = [
   'Condiments',
 ];
 const ingrGaleryEl = document.querySelector("#ingredients")
+const itemEl = ingredients.map((el) => { 
+  const liEl = document.createElement("li");
+  liEl.classList.add("item");
+  liEl.textContent = el;
+  return liEl;
+})
+ingrGaleryEl.append(...itemEl);
 
-const liEl = document.createElement("li")
-liEl.classList.add("item")
-
-
-const markup = ingredients.map((el) => { liEl.append(el)
-return })
-
-console.log(liEl)
